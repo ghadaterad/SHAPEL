@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-family: "octin sports", sans-serif;
+}
+
+#nav-toggler {
+    -webkit-appearance: none;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1010;
+    background-color: white;
+    font-size: 2rem;
+}
+
+#nav-toggler:checked {
+    transform: rotate(180deg);
+}
+
+#nav-toggler:checked::before {
+    content: '\f00d';
+    color: #000000;
+    transition: .2s linear .2s;
+}
+
+#nav-toggler:checked~.navbar {
+    left: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 10%;
+}
+
+.navbar a {
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: 3px;
+    line-height: 2;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: system-ui;
+}
+
+.navbar a:hover {
+    color: rgb(172, 6, 6);
+    transition: 1s;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3a3f58;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* ---------------------- */
+header {
+    background-image: url(./images/slider-bg.jpg);
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.sliders i{
+    background-color: #e45441;
+    border-radius: 5px;
+}
+.logo p {
+    color: white;
+    padding: 12px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.head-child {
+    background-color: rgba(58, 63, 88, 0.8);
+    color: #ffffff;
+    padding: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    width: 48%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.head-child h1 {
+    font-family: "octin sports", sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    width: 91%;
+}
+
+.head-child p {
+    margin-top: 15px;
+}
+
+.head-child button {
+    padding: 10px 45px;
+    border: 1px solid #ffffff;
+    transition: all .2s;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.head-child button:hover {
+    background-color: transparent;
+    color: wheat;
+    cursor: pointer;
+}
+
+/* --------------------------- */
+.ABOUT-US {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.about-left {
+    width: 50%;
+}
+
+.about-left img {
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 80%;
+}
+
+.about-right {
+    margin-top: 200px;
+    width: 50%;
+}
+
+.about-right p {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+.about-right button {
+    padding: 10px 45px;
+    color: white;
+    font-size: 15px;
+    background-color: #3a3f58;
+}
+
+.about-right button:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    border: 1px solid #3a3f58;
+}
+
+/* ----------------------- */
+.GALLERY {
+    background-color: #fafafa;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+.GALLERY h1 {
+    text-align: center;
+    padding: 35px 10px;
+}
+
+.GALLERY-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -15px 50px;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.gallery-child-1,
+.gallery-child-6 {
+    width: 50%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.gallery-child-1 img,
+.gallery-child-6 img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-child-2,
+.gallery-child-5 {
+    width: 25%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.gallery-child-2 img,
+.gallery-child-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-child-3,
+.gallery-child-4 {
+    width: 25%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.gallery-child-3 img,
+.gallery-child-4 img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-overlay {
+    background-color: #3a3f58;
+    transform: translateY(100%);
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    z-index: 5;
+    transition: all .1s;
+}
+
+.GALLERY button {
+    padding: 10px 45px;
+    color: white;
+    background-color: #e45441;
+    margin-left: 50%;
+    margin-bottom: 55px;
+    margin-top: -6px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.GALLERY button:hover {
+    border: 1px solid #e45441;
+    background-color: transparent;
+    color: #e45441;
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+.SERVICES h1 {
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.SERVICES {
+    margin-bottom: 120px;
+}
+
+.services-content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 9%;
+    font-family: "octin sports", sans-serif;
+    margin-right: 9%;
+    gap: 20px;
+}
+
+.services-content div {
+    background-color: #3a3f58;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    padding-top: 20px
+}
+
+.services-content img {
+    border-radius: 50%;
+    height: 145px;
+    width: 145px;
+    margin-top: -90px;
+    border: 5px solid white;
+}
+
+.services-content p {
+    font-size: 15px;
+    padding-top: 12px;
+}
+
+.services-content h3 {
+    padding-top: 20px;
+    font-family: "octin sports", sans-serif;
+}
+
+.services-content button {
+    background-color: #e45441;
+    border: 1px solid #e45441;
+    padding: 10px 35px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    margin-top: 13px;
+    margin-bottom: 15px;
+}
+
+.services-content button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: red;
+}
+
+/* ------------------------------- */
+.LATEST-BLOG {
+    margin-bottom: 100px;
+
+}
+
+.LATEST-BLOG h1 {
+    margin-bottom: 100px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.latest-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.LATEST-1,
+.LATEST-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.LATEST-1 img,
+.LATEST-2 img {
+    position: relative;
+    width: 225px;
+    min-width: 225px;
+    margin-left: 10px;
+}
+
+.latest-2-child,
+.latest-1-child {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-family: "octin sports", sans-serif;
+    background-color: #fafafa;
+    margin-right: 20px;
+}
+
+.latest-2-child h3,
+.latest-1-child h3 {
+    font-family: "octin sports", sans-serif;
+    padding-bottom: 10px;
+}
+
+.latest-2-child button,
+.latest-1-child button {
+    background-color: #3a3f58;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.latest-2-child button:hover {
+    border: 1px solid #3a3f58;
+    background-color: transparent;
+    color: #3a3f58;
+    cursor: pointer;
+}
+
+.latest-1-child button:hover {
+    border: 1px solid #3a3f58;
+    background-color: transparent;
+    color: #3a3f58;
+    cursor: pointer;
+}
+
+/* -------------------------------------- */
+.TESTIMONIAL h1 {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.TESTIMONIAL img {
+    border-radius: 50%;
+    border: 7px solid white;
+    width: 175px;
+    height: 175px;
+    margin-top: -100px;
+}
+
+.Testimonial-content {
+    background-color: #3a3f58;
+    color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 20px 25px;
+}
+
+.Testimonial-content h2 {
+    color: #e45441;
+    padding-top: 20px;
+    font-family: "octin sports", sans-serif;
+    padding-bottom: 10px;
+}
+
+/* --------------------------------------- */
+.Contact-us {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: -40px;
+}
+
+.left-form {
+    background-color: #3a3f58;
+    color: white;
+    width: 85%;
+    margin-left: 100px;
+    border: 5px solid white;
+    padding: 45px;
+}
+
+.left-form h1 {
+    padding-bottom: 20px;
+}
+
+.left-form ::placeholder {
+    font-size: 16px;
+    color: rgb(64, 64, 64);
+}
+
+.left-form .inp-1,
+.inp-2,
+.inp-3 {
+    width: 100%;
+    padding-left: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.inp-4 {
+    width: 100%;
+    padding-left: 15px;
+    height: 120px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.left-form button {
+    background-color: #e45441;
+    color: white;
+    padding: 15px 55px;
+    font-size: 16px;
+}
+
+.left-form button:hover {
+    background-color: transparent;
+    border: 1px solid #e45441;
+    color: #e45441;
+}
+
+.right-subscribe {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 100px 0px 0px 0px;
+}
+
+.right-subscribe h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: "Poppins", sans-serif;
+}
+
+.right-subscribe p {
+    color: #777;
+    margin-top: 10px;
+}
+
+.right-subscribe input {
+    background-color: #ccc;
+    height: 50px;
+    padding-left: 15px;
+    color: #ffffff;
+    border: none;
+    width: 85%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.right-subscribe button {
+    background-color: transparent;
+    color: #3a3f58;
+    border: none;
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #3a3f58;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #3a3f58;
+    transition: all .2s;
+}
+
+.right-subscribe button:hover {
+    background-color: transparent;
+    border: 1px solid #3a3f58;
+    color: #3a3f58;
+    cursor: pointer;
+}
+
+.logoo {
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    background-color: #3a3f58;
+    padding: 40px 10px;
+}
+
+.logoo:hover {
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+.Footer-list {
+    background-color: #3a3f58;
+    color: white;
+    display: flex;
+    padding: 60px;
+}
+
+.Footer-list h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.foot-row1,
+.foot-row2,
+.foot-row3,
+.foot-row4 {
+    width: 25%;
+    padding: 10px;
+}
+
+.foot-row4-child i {
+    border: 1px solid white;
+    padding: 15px;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.foot-row4-child i:hover {
+    color: #e45441;
+    cursor: pointer;
+}
+
+.foot-row3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.foot-row3 a :hover {
+    color: #e45441;
+}
+
+.foot-row3 {
+    line-height: 35px;
+}
+
+.foot-row3-child i {
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+
+
+/* ------------------------------------ */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+/* ---------------------------------- */
+@media (max-width: 1050px) {
+    .about-left img {
+        margin-left: 50px;
+        margin-top: 60px;
+        width: 85%;
+    }
+
+    .about-right {
+        margin-top: 100px;
+    }
+
+    .Footer-list {
+        flex-wrap: wrap;
+    }
+
+    .foot-row1,
+    .foot-row2,
+    .foot-row3,
+    .foot-row4 {
+        width: 48%;
+    }
+}
+
+@media(max-width:900px) {
+    .about-right {
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+
+    .services-content {
+        flex-wrap: wrap;
+    }
+
+    .services-content div {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+
+    .services-3 {
+        margin-top: 90px;
+        margin-left: 25%;
+    }
+
+    .latest-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LATEST-1 {
+        margin-bottom: 40px;
+    }
+
+    .left-form {
+        margin-left: 55px;
+    }
+}
+
+@media (max-width: 800px) {
+    .head-child {
+        width: 90%;
+    }
+
+    .ABOUT-US {
+        flex-direction: column;
+    }
+
+    .about-right {
+        margin-left: auto;
+        width: 85%;
+    }
+
+    .about-left {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-child-1,
+    .gallery-child-6 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .gallery-child-2,
+    .gallery-child-5 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .gallery-child-3,
+    .gallery-child-4 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .services-content div {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 90%;
+        margin-top: 65px;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 90%;
+    }
+
+    .Contact-us {
+        flex-direction: column-reverse;
+        margin-top: 0px;
+    }
+
+    .left-form {
+        width: 80%;
+    }
+
+    .right-subscribe {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:700px){
+    .foot-row1,
+    .foot-row2,
+    .foot-row3,
+    .foot-row4 {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media(max-width:500px) {
+    .about-left {
+        width: 95%;
+        margin: 0px;
+    }
+
+    .about-left img {
+        margin-left: 20px;
+        margin-right: auto;
+        margin-top: 60px;
+        width: 93%;
+    }
+
+    .gallery-child-1,
+    .gallery-child-2,
+    .gallery-child-3,
+    .gallery-child-4,
+    .gallery-child-5,
+    .gallery-child-6 {
+        width: 100%;
+    }
+
+    .LATEST-1,
+    .LATEST-2 {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .LATEST-1 img,
+    .LATEST-2 img {
+        width: 100%;
+    }
+
+    .latest-1-child,
+    .latest-2-child {
+        padding-left: 30px;
+        margin-right: 0px;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .latest-2-child button,
+    .latest-1-child button {
+        margin-bottom: 10px;
+    }
+
+    .Testimonial-content {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+@media(max-width:350px) {
+    .head-child {
+        margin-top: 40px;
+    }
+}
