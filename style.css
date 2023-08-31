@@ -98,10 +98,30 @@ header {
     height: 100vh;
     box-sizing: border-box;
 }
-.sliders i{
+
+.sliders {
+    display: flex;
+}
+
+.sliders-1 i,
+.sliders-2 i {
     background-color: #e45441;
     border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    top: 50vh;
+    font-size: 15px;
+    margin-left: 50px;
 }
+
+.sliders-2 i {
+    margin-left: 80vw;
+}
+
+.fa-arrow-right {
+    margin-left: 200px;
+}
+
 .logo p {
     color: white;
     padding: 12px;
@@ -661,6 +681,14 @@ footer {
     .foot-row4 {
         width: 48%;
     }
+
+    .sliders-2 i {
+        margin-left: 80vw;
+    }
+
+    .head-child {
+        margin-top: 0px;
+    }
 }
 
 @media(max-width:900px) {
@@ -695,6 +723,10 @@ footer {
 
     .left-form {
         margin-left: 55px;
+    }
+
+    .head-child {
+        margin-top: 0px;
     }
 }
 
@@ -763,8 +795,23 @@ footer {
         margin-right: auto;
         margin-bottom: 30px;
     }
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 80vh;
+    }
+
+    .head-child {
+        margin-top: 0px;
+    }
+
+    .sliders-2 i {
+        margin-left: 72vw;
+    }
 }
-@media (max-width:700px){
+
+@media (max-width:700px) {
+
     .foot-row1,
     .foot-row2,
     .foot-row3,
@@ -772,11 +819,56 @@ footer {
         width: 100%;
         text-align: center;
     }
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 85vh;
+    }
+
+    .sliders-2 i {
+        margin-left: 69vw;
+    }
+
+    .head-child {
+        margin-top: 0px;
+    }
 }
+
+@media (max-width:600px) {
+    .head-child {
+        margin-top: 0px;
+    }
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 75vh;
+    }
+
+    .sliders-2 i {
+        margin-left: 64vw;
+    }
+}
+
+@media(max-width:550px) {
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 79vh;
+    }
+
+    .sliders-2 i {
+        margin-left: 60vw;
+    }
+}
+
 @media(max-width:500px) {
     .about-left {
         width: 95%;
         margin: 0px;
+    }
+
+    .head-child {
+        margin-top: 0px;
     }
 
     .about-left img {
@@ -824,10 +916,135 @@ footer {
         margin-left: 2%;
         margin-right: 2%;
     }
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 88vh;
+    }
+}
+
+@media(max-width:450px) {
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 90vh;
+        margin-left: 10vw;
+    }
+
+    .sliders-2 i {
+        margin-left: 55vw;
+    }
+
+    .head-child {
+        margin-top: -9px;
+    }
+}
+
+@media(max-width:400px) {
+
+    .sliders-1 i,
+    .sliders-2 i {
+        top: 90vh;
+        margin-left: 10vw;
+        padding: 15px;
+    }
+
+    .sliders-2 i {
+        margin-left: 58vw;
+    }
+    footer {
+        text-align: center;
+        padding: 0px;
+        font-size: 11px;
 }
 
 @media(max-width:350px) {
+    header {
+        height: 74vh;
+    }
+
     .head-child {
         margin-top: 40px;
+    }
+
+    .head-child {
+        margin-top: 0px;
+    }
+
+    .head-child h1 {
+        font-size: 1.1rem;
+    }
+
+    .about-right p {
+        font-size: 13px;
+    }
+
+    .sliders-2 i {
+        margin-left: 54vw;
+    }
+
+    .GALLERY button {
+        padding: 10px 29px;
+        font-size: 14px;
+    }
+
+    .SERVICES h1 {
+        padding-bottom: 60px;
+        padding-top: 10px;
+    }
+
+    .GALLERY {
+        margin-bottom: 0px;
+    }
+
+    .left-form h1 {
+        font-size: 25px;
+    }
+
+    .left-form .inp-1,
+    .inp-2,
+    .inp-3 {
+        height: 25px;
+        margin-bottom: 13px;
+    }
+    .inp-4{
+        height: 60px;
+    }
+    .left-form button{
+        padding: 7px 29px;
+    }
+    .foot-row4-child{
+        display: flex;
+    margin-left: -35px;
+    }
+
+    .left-form {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .about-right button {
+        padding: 10px 30px;
+        font-size: 13px;
+    }
+
+    .head-child p {
+        font-size: 12px;
+    }
+
+    .head-child button {
+        font-size: 12px;
+        padding: 10px 30px;
+    }
+
+    .sliders-1 i,
+    .sliders-2 i {
+        display: none;
+    }
+}
+
+@media(max-width:250px) {
+    .head-child button {
+        padding: 10px 20px;
     }
 }
